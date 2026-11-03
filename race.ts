@@ -1,6 +1,6 @@
 // Two races against a running server. The right answers are "1 of 20" and
 // "50 of 50".
-const base = process.argv[2] ?? "http://localhost:8000";
+const base = process.argv[2] ?? "http://localhost:8787";
 const slug = `race-${Date.now()}`;
 const times = <T>(n: number, fn: (i: number) => Promise<T>) =>
   Promise.all(Array.from({ length: n }, (_, i) => fn(i)));

@@ -1,0 +1,19 @@
+{
+  "name": "deno-deploy-to-workers",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types",
+    "check": "tsc --noEmit",
+    "race": "bun race.ts"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "wrangler": "^4.157.0"
+  },
+  "dependencies": {
+    "@std/encoding": "npm:@jsr/std__encoding"
+  }
+}
