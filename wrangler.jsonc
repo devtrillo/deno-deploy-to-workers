@@ -2,6 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "deno-deploy-to-workers",
   "main": "src/index.ts",
-  "compatibility_date": "2026-11-01",
-  "kv_namespaces": [{ "binding": "LINKS", "id": "replace-with-wrangler-kv-namespace-create" }]
+  "compatibility_date": "2026-11-03",
+  "durable_objects": {
+    "bindings": [{ "name": "LINK", "class_name": "Link" }]
+  },
+  "exports": {
+    "Link": { "type": "durable-object", "storage": "sqlite" }
+  }
 }
